@@ -117,10 +117,10 @@ class CarInterfaceBase(ABC):
   def create_common_events(self, cs_out, extra_gears=None, pcm_enable=True):
     events = Events()
 
-    if cs_out.doorOpen:
-      events.add(EventName.doorOpen)
-    if cs_out.seatbeltUnlatched:
-      events.add(EventName.seatbeltNotLatched)
+#    if cs_out.doorOpen:
+#      events.add(EventName.doorOpen)
+#    if cs_out.seatbeltUnlatched:
+#      events.add(EventName.seatbeltNotLatched)
     if self.dragonconf.dpGearCheck and cs_out.gearShifter not in (GearShifter.drive, GearShifter.sport, GearShifter.eco, GearShifter.low) and (extra_gears is None or
          cs_out.gearShifter not in extra_gears):
       events.add(EventName.wrongGear)
