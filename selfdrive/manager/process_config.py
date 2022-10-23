@@ -13,7 +13,7 @@ procs = [
   NativeProcess("clocksd", "selfdrive/clocksd", ["./clocksd"]),
   NativeProcess("dmonitoringmodeld", "selfdrive/modeld", ["./dmonitoringmodeld"], enabled=not MIPI and (not PC or WEBCAM), driverview=True),
   NativeProcess("logcatd", "selfdrive/logcatd", ["./logcatd"]),
-  NativeProcess("loggerd", "selfdrive/loggerd", ["./loggerd"]),
+#  NativeProcess("loggerd", "selfdrive/loggerd", ["./loggerd"]),
   NativeProcess("modeld", "selfdrive/modeld", ["./modeld"]),
   NativeProcess("proclogd", "selfdrive/proclogd", ["./proclogd"]),
   NativeProcess("sensord", "selfdrive/sensord", ["./sensord"], enabled=not PC and not MIPI, persistent=EON, sigkill=EON),
@@ -26,7 +26,7 @@ procs = [
   PythonProcess("controlsd", "selfdrive.controls.controlsd"),
   PythonProcess("deleter", "selfdrive.loggerd.deleter", persistent=True),
   PythonProcess("dmonitoringd", "selfdrive.monitoring.dmonitoringd", enabled=not MIPI and (not PC or WEBCAM), driverview=True),
-  PythonProcess("logmessaged", "selfdrive.logmessaged", persistent=True),
+#  PythonProcess("logmessaged", "selfdrive.logmessaged", persistent=True),
   PythonProcess("pandad", "selfdrive.pandad", persistent=True),
   PythonProcess("paramsd", "selfdrive.locationd.paramsd"),
   PythonProcess("plannerd", "selfdrive.controls.plannerd"),
@@ -34,8 +34,8 @@ procs = [
   PythonProcess("thermald", "selfdrive.thermald.thermald", persistent=True),
   PythonProcess("timezoned", "selfdrive.timezoned", enabled=TICI, persistent=True),
   PythonProcess("tombstoned", "selfdrive.tombstoned", enabled=not PC and not MIPI, persistent=True),
-  PythonProcess("updated", "selfdrive.updated", enabled=not PC, persistent=True),
-  PythonProcess("uploader", "selfdrive.loggerd.uploader", enabled=not MIPI, persistent=True),
+#  PythonProcess("updated", "selfdrive.updated", enabled=not PC, persistent=True),
+#  PythonProcess("uploader", "selfdrive.loggerd.uploader", enabled=not MIPI, persistent=True),
   PythonProcess("mapd", "selfdrive.mapd.mapd"),
 
   # EON only
